@@ -1,0 +1,46 @@
+﻿<Page x:Class="Praktika_9.MainPage.ZapisNaPriem"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praktika_9.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ZapisNaPriem">
+
+    <Grid Background="Green">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Foreground="Blue" HorizontalAlignment="Left"  Text="Запись на прием" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Фамилия" Grid.Row="1" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Имя" Grid.Row="2" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Отчество" Grid.Row="3" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Номер телефона" Grid.Row="4" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Дата приема" Grid.Row="5" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Статус" Grid.Row="6" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Клиент" Grid.Row="7" Style="{StaticResource TextBlock}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" MaxLength="50" Text="{Binding Familia}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding Name}"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding Otchestvo}"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding Otchestvo}"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="ComboDate" SelectedItem="{Binding Date}" Style="{StaticResource ComboBox}" DisplayMemberPath="Date1"/>
+        <ComboBox Grid.Row="6" Grid.Column="1" x:Name="ComboStatus" SelectedItem="{Binding Status}" Style="{StaticResource ComboBox}" DisplayMemberPath="Status1"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" x:Name="ComboClient" SelectedItem="{Binding Client}" Style="{StaticResource ComboBox}" DisplayMemberPath="id"/>
+        <Button Grid.Row="8" Grid.Column="2" Content="Сохранить" Name="btnSave" Click="btnSave_Click" Style="{StaticResource ButGreen}"/>
+    </Grid>
+</Page>
+

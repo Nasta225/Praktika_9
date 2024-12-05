@@ -1,0 +1,42 @@
+﻿<Page x:Class="Praktika_9.MainPage.ClientAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praktika_9.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientAdd">
+
+    <Grid Background="Green">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Foreground="Blue" HorizontalAlignment="Left"  Text="Добавление клиента" Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Фамилия" Grid.Row="1" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Имя" Grid.Row="2" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Отчество" Grid.Row="3" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Номер телефона" Grid.Row="4" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Дата записи" Grid.Row="6" Style="{StaticResource TextBlock}"/>
+        <TextBlock Text="Комментарий врача" Grid.Row="5" Style="{StaticResource TextBlock}"/>
+        <DatePicker Grid.Row="6" Grid.Column="1" Width="200" HorizontalAlignment="Left"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" MaxLength="50" Text="{Binding Familia}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding Name}"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding Otchestvo}"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding Nomer}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding komment}"/>
+        <Button Grid.Row="8" Grid.Column="2" Content="Сохранить" Name="btnSave" Click="btnSave_Click" Style="{StaticResource ButGreen}"/>
+    </Grid>
+</Page>
